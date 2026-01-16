@@ -1,0 +1,7 @@
+*.dSYM
+*.o
+
+/demo
+/example*
+/persist.txt
+/test

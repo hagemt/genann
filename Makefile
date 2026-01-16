@@ -17,6 +17,12 @@ test: test.o genann.o
 check: test
 	./$^
 
+demo: test
+	$(CC) $(CFLAGS) $(LDFLAGS) -Wextra -Werror \
+		-o demo main.c genann.c
+	./demo persist.txt
+.PHONY: demo
+
 example1: example1.o genann.o
 
 example2: example2.o genann.o
